@@ -1,6 +1,6 @@
 #include <iostream>
 
-int bigSmall(const int arr[], int n)
+int big_small(const int arr[], int n)
 {
   int count = 0;
   for (int i = 0; i < (n - 2); i++)
@@ -13,7 +13,7 @@ int bigSmall(const int arr[], int n)
   return count;
 }
 
-int pifTr(const int arr[], int n)
+int pif_tr(const int arr[], int n)
 {
   int count = 0;
   for (int i = 0; i < (n - 2); i++)
@@ -36,12 +36,12 @@ int pifTr(const int arr[], int n)
 
 int main()
 {
-  const int maxInt = 100;
-  int bigSmallCount = 0;
-  int pifTrCount = 0;
+  const int max_int = 1000;
+  int big_small_count = 0;
+  int pif_tr_count = 0;
   int x = 0;
   int c = 0;
-  int arr[maxInt]{};
+  int arr[max_int]{};
 
   while (true)
   {
@@ -55,7 +55,7 @@ int main()
     {
       break;
     }
-    if (c < maxInt)
+    if (c < max_int)
     {
       arr[c] = x;
       c++;
@@ -68,10 +68,10 @@ int main()
     return 2;
   }
 
-  bigSmallCount = bigSmall(arr, c);
-  pifTrCount = pifTr(arr, c);
+  big_small_count = big_small(arr, c);
+  pif_tr_count = pif_tr(arr, c);
 
-  std::cout << bigSmallCount << "\n";
-  std::cout << pifTrCount << "\n";
+  std::cout << big_small_count << "\n";
+  std::cout << pif_tr_count << "\n";
   return 0;
 }
