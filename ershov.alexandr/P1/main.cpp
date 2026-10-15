@@ -1,6 +1,6 @@
 #include <iostream>
 
-int big_small(const int arr[], int n)
+int bigSmall(const int arr[], int n)
 {
   int count = 0;
   for (int i = 0; i < (n - 2); i++)
@@ -13,7 +13,7 @@ int big_small(const int arr[], int n)
   return count;
 }
 
-int pif_tr(const int arr[], int n)
+int pifTr(const int arr[], int n)
 {
   int count = 0;
   for (int i = 0; i < (n - 2); i++)
@@ -68,8 +68,8 @@ int main()
     return 2;
   }
 
-  big_small_count = big_small(arr, c);
-  pif_tr_count = pif_tr(arr, c);
+  big_small_count = bigSmall(arr, c);
+  pif_tr_count = pifTr(arr, c);
 
   std::cout << big_small_count << "\n";
   std::cout << pif_tr_count << "\n";
