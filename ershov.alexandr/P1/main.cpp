@@ -26,7 +26,7 @@ int pifTr(const int arr[], int n)
     {
       count++;
     }
-    else if (arr[i + 1] * arr[i + 1] + arr[i + 2] * arr[i + 2] == arr[i * i])
+    else if (arr[i + 1] * arr[i + 1] + arr[i + 2] * arr[i + 2] == arr[i] * arr[i])
     {
       count++;
     }
@@ -41,7 +41,7 @@ int main()
   int pifTrCount = 0;
   int x = 0;
   int c = 0;
-  int arr[maxInt];
+  int arr[maxInt]{};
 
   while (true)
   {
@@ -50,7 +50,7 @@ int main()
     {
       std::cerr << "ERROR: incorrect input data type" << "\n";
       return 1;
-  }
+    }
     if (x == 0)
     {
       break;
