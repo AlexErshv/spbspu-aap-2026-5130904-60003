@@ -37,18 +37,31 @@ int main()
         big_small_count++;
       }
 
-      if (prev2 * prev2 + prev1 * prev1 == curr * curr || prev2 * prev2 + curr * curr == prev1 * prev1 || prev1 * prev1 + curr * curr == prev2 * prev2)
+      if (prev2 * prev2 + prev1 * prev1 == curr * curr)
+      {
+        pif_tr_count++;
+      }
+
+      else if (prev2 * prev2 + curr * curr == prev1 * prev1)
+      {
+        pif_tr_count++;
+      }
+
+      else if ( prev1 * prev1 + curr * curr == prev2 * prev2)
       {
         pif_tr_count++;
       }
     }
   }
+
   if (c < 3)
   {
     std::cerr << "ERROR: incorrect sequence lenght\n";
     return 2;
   }
+
   std::cout << big_small_count << "\n";
   std::cout << pif_tr_count << "\n";
+
   return 0;
 }
