@@ -47,7 +47,7 @@ int main()
         pif_tr_count++;
       }
 
-      else if ( prev1 * prev1 + curr * curr == prev2 * prev2)
+      else if (prev1 * prev1 + curr * curr == prev2 * prev2)
       {
         pif_tr_count++;
       }
