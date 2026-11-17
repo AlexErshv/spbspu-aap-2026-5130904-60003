@@ -33,23 +33,23 @@ namespace ershov {
 
     for (int i = 0; i < index; ++i) {
       if (line[i].count_ > top1) {
-        top3 = top2; 
-        top2 = top1; 
-        top1 = line[i].count_; 
+        top3 = top2;
+        top2 = top1;
+        top1 = line[i].count_;
         c3 = c2;
         c2 = c1;
         c1 = line[i].name_;
-      } 
-      
+      }
+
       else if (line[i].count_ > top2) {
-        top3 = top2; 
-        top2 = line[i].count_; 
+        top3 = top2;
+        top2 = line[i].count_;
         c3 = c2;
         c2 = line[i].name_;
-      } 
-      
+      }
+
       else if (line[i].count_ > top3) {
-        top3 = line[i].count_; 
+        top3 = line[i].count_;
         c3 = line[i].name_;
       }
     }
@@ -76,7 +76,7 @@ int main() {
             break;
           }
         }
-        
+    
         if (input_buffer[index].count_ == 0) {
           input_buffer[index].name_ = ch;
           input_buffer[index].count_ += 1;
