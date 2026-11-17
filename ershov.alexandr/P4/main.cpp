@@ -70,7 +70,7 @@ int main() {
           ch = ch + ('a' - 'A');
         }
 
-        for (int i = 0; i < index; ++i) {
+        for (size_t i = 0; i < index; ++i) {
           if (input_buffer[i].name_ == ch) {
             input_buffer[i].count_ += 1;
             break;
