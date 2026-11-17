@@ -70,13 +70,14 @@ int main() {
         if (ch >= 'A' && ch <= 'Z') {
           ch = ch + ('a' - 'A');
         }
+
         for (int i = 0; i < index; ++i) {
           if (input_buffer[i].name_ == ch) {
             input_buffer[i].count_ += 1;
             break;
           }
         }
-    
+
         if (input_buffer[index].count_ == 0) {
           input_buffer[index].name_ = ch;
           input_buffer[index].count_ += 1;
