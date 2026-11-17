@@ -4,10 +4,10 @@ namespace ershov {
 
   class Letter {
   public:
-    char name_;
-    int count_;
+    char name;
+    int count;
 
-    Letter() : name_(0), count_(0) {}
+    Letter() : name(0), count(0) {}
   };
 
   void findMissing(Letter* line) {
@@ -15,11 +15,11 @@ namespace ershov {
     for (int s = 'a'; s <= 'z'; s++) {
       const Letter* p = line;
 
-      while (p->name_ != '\0' && p->name_ != s) {
+      while (p->name != '\0' && p->name != s) {
         p++;
       }
 
-      if (p->name_ == '\0') {
+      if (p->name == '\0') {
         std::cout << static_cast<char>(s);
       }
     }
@@ -32,25 +32,25 @@ namespace ershov {
     char c1 = 0, c2 = 0, c3 = 0;
 
     for (int i = 0; i < index; ++i) {
-      if (line[i].count_ > top1) {
+      if (line[i].count > top1) {
         top3 = top2;
         top2 = top1;
-        top1 = line[i].count_;
+        top1 = line[i].count;
         c3 = c2;
         c2 = c1;
-        c1 = line[i].name_;
+        c1 = line[i].name;
       }
 
-      else if (line[i].count_ > top2) {
+      else if (line[i].count > top2) {
         top3 = top2;
-        top2 = line[i].count_;
+        top2 = line[i].count;
         c3 = c2;
-        c2 = line[i].name_;
+        c2 = line[i].name;
       }
 
-      else if (line[i].count_ > top3) {
-        top3 = line[i].count_;
-        c3 = line[i].name_;
+      else if (line[i].count > top3) {
+        top3 = line[i].count;
+        c3 = line[i].name;
       }
     }
 
@@ -62,7 +62,7 @@ int main() {
     const size_t max_size = 1000;
     ershov::Letter input_buffer[max_size];
     size_t index = 0;
-    char ch;
+    char ch = 0;
 
     while (std::cin.get(ch) && ch != '\n') {
       if (index < max_size - 1 && std::isalpha(ch)) {
@@ -71,15 +71,15 @@ int main() {
         }
 
         for (size_t i = 0; i < index; ++i) {
-          if (input_buffer[i].name_ == ch) {
-            input_buffer[i].count_ += 1;
+          if (input_buffer[i].name == ch) {
+            input_buffer[i].count += 1;
             break;
           }
         }
 
-        if (input_buffer[index].count_ == 0) {
-          input_buffer[index].name_ = ch;
-          input_buffer[index].count_ += 1;
+        if (input_buffer[index].count == 0) {
+          input_buffer[index].name = ch;
+          input_buffer[index].count += 1;
           index++;
         }
       }
