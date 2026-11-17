@@ -16,7 +16,7 @@ namespace ershov
 
   void findMissing(Letter* line)
   {
-    for (int s = 'a'; s <= 'z'; s++)
+    for (char s = 'a'; s <= 'z'; s++)
     {
       const Letter* p = line;
 
@@ -27,7 +27,7 @@ namespace ershov
 
       if (p->name == '\0')
       {
-        std::cout << static_cast<char> ( s );
+        std::cout << s;
       }
     }
 
