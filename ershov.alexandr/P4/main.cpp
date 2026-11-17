@@ -27,7 +27,7 @@ namespace ershov
 
       if (p->name == '\0')
       {
-        std::cout << static_cast<char>(s);
+        std::cout << static_cast<char> (s);
       }
     }
 
