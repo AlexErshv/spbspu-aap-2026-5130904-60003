@@ -20,7 +20,7 @@ namespace ershov {
       }
 
       if (p->name_ == '\0') {
-        std::cout << (char)s;
+        std::cout << static_cast<char>(s);
       }
     }
 
@@ -61,8 +61,7 @@ namespace ershov {
 int main() {
     const size_t max_size = 1000;
     ershov::Letter input_buffer[max_size];
-    int top1 = 0, top2 = 0, top3 = 0;
-    int index = 0;
+    size_t index = 0;
     char ch;
 
     while (std::cin.get(ch) && ch != '\n') {
