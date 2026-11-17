@@ -8,9 +8,7 @@ namespace ershov
     char name;
     int count;
 
-    Letter():
-      name(0),
-      count(0)
+    Letter(): name(0), count(0)
     {}
   };
 
